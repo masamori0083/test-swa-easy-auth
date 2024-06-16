@@ -6,7 +6,7 @@ const ProtectedRoute = (props) => {
 	const navigate = useNavigate();
 
 	if(!isAuthenticated()) {
-		navigate('/login');
+		navigate('/login', { replace: true });
 		return null;
 	}
 	return props.children;
