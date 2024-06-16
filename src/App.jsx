@@ -1,4 +1,4 @@
-import { Route, Router, Routes } from "solid-app-router";
+import { Route, Router, Routes } from "@solidjs/router";
 import { AuthProvider } from "./components/AuthContext";
 import Login from "./components/Login";
 import ProtectedRoute from "./components/ProtectedRoute";
