@@ -9,8 +9,12 @@ const App = () => {
 	return (
 		<AuthProvider>
 		<Router>
-				<Route path="/login" element={<Login />} />
-				<Route path="/home" element={<ProtectedRoute><TopPage /></ProtectedRoute>} />
+				<Route path="/login" component={Login} />
+				<Route path="/" component={() => (
+					<ProtectedRoute>
+						<TopPage />
+					</ProtectedRoute>
+				)} />
 		</Router>
 		</AuthProvider>
 	)
