@@ -1,3 +1,4 @@
+import { A } from "@solidjs/router";
 import { createSignal } from "solid-js";
 
 const providers = ['twitter', 'github', 'aad'];
@@ -15,7 +16,7 @@ const Login = () => {
 						<button>{provider}</button>
 					</a>
 				))}
-				<a href="/.auth/login/aad">Login</a>
+				<A href="/.auth/login/aad">Login</A>
 			</div>
 		</div>
 	);
