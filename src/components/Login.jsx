@@ -16,7 +16,7 @@ const Login = () => {
 						<button>{provider}</button>
 					</a>
 				))}
-				<A href="/.auth/login/aad">Login</A>
+				<A href="/.auth/login/aad" target="_self">Login</A>
 			</div>
 		</div>
 	);
