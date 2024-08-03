@@ -7,10 +7,6 @@ export const AuthProvider = (props) => {
 	const [userInfo, setUserInfo] = createSignal(null);
 
 	const login = () => setAuthenticated(true);
-	const logout = () => {
-		setAuthenticated(false)
-		setUserInfo(null)
-	};
 
 	const getUserInfo = async () => {
 		try {const response = await fetch('/.auth/me');
@@ -25,7 +21,7 @@ export const AuthProvider = (props) => {
 	onMount(() => getUserInfo());
 
 	return (
-		<AuthContext.Provider value={{isAuthenticated, userInfo ,login, logout}}>
+		<AuthContext.Provider value={{isAuthenticated, userInfo ,login}}>
 			{props.children}
 		</AuthContext.Provider>
 	)

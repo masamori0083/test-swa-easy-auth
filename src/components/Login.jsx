@@ -12,9 +12,9 @@ const Login = () => {
 			<h1>Login</h1>
 			<div>
 			{providers.map(provider => (
-          <a key={provider} href={`/.auth/login/${provider}?post_login_redirect_uri=${window.location.origin}${redirect()}`}>
+          <A key={provider} href={`/.auth/login/${provider}?post_login_redirect_uri=${window.location.origin}${redirect()}`} target="_self">
 						<button>{provider}</button>
-					</a>
+					</A>
 				))}
 				<A href="/.auth/login/aad" target="_self">Login</A>
 			</div>
