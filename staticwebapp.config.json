@@ -6,10 +6,25 @@
     {
       "route": "/*",
       "statusCode": 200
-    }
+    },
+		{
+			"route": "/",
+			"allowedRoles": ["authenticated"]
+		},
+		{
+			"route": "/logout",
+			"redirect": "/login"
+		}
   ],
+	"responseOverrides": {
+		"401": {
+			"redirect": "/login",
+			"statusCode": 302
+		}
+	},
   "navigationFallback": {
     "rewrite": "/index.html",
     "exclude": ["/images/*.{png,jpg,gif}", "/css/*"]
   }
+
 }

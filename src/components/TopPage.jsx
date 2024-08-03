@@ -2,6 +2,13 @@ import styles from '../App.module.css';
 import logo from '../logo.svg';
 import { useAuth } from './AuthContext';
 
+async function getUserInfo() {
+	const response = await fetch('./auth/me');
+	const payload = await response.json();
+	const { clientPrincipal } = payload;
+	return clientPrincipal;
+}
+
 const TopPage = () => {
 	const { userInfo, logout } = useAuth();
 	return (
