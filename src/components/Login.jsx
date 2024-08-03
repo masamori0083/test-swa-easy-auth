@@ -3,7 +3,6 @@ import { A } from "@solidjs/router";
 const providers = ['github', 'aad'];
 
 const Login = () => {
-	// const [redirect, setRedirect] = createSignal('/home');
 
 
 	return (
@@ -15,7 +14,6 @@ const Login = () => {
 						<button>{provider}</button>
 					</A>
 				))}
-				<A href="/.auth/login/aad" target="_self">Login</A>
 			</div>
 		</div>
 	);
