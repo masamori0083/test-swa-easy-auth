@@ -1,7 +1,7 @@
 import { A } from "@solidjs/router";
 import { createSignal } from "solid-js";
 
-const providers = ['twitter', 'github', 'aad'];
+const providers = ['github', 'aad'];
 
 const Login = () => {
 	const [redirect, setRedirect] = createSignal('/home');

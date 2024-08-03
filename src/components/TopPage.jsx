@@ -7,7 +7,7 @@ const TopPage = () => {
 	const { userInfo } = useAuth();
 	return (
 		<div class={styles.App}>
-			<p>Welcome, {userInfo() ? `${userInfo().userDetails} (ID: ${userInfo().userId})`: "Guest"}</p>
+			<p>Welcome, {userInfo() ? `${userInfo().userDetails}`: "Guest"}</p>
 			<header class={styles.header}>
 				<img src={logo} class={styles.logo} alt="logo" />
 				<p>
