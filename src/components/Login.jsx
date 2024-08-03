@@ -1,10 +1,9 @@
 import { A } from "@solidjs/router";
-import { createSignal } from "solid-js";
 
 const providers = ['github', 'aad'];
 
 const Login = () => {
-	const [redirect, setRedirect] = createSignal('/home');
+	// const [redirect, setRedirect] = createSignal('/home');
 
 
 	return (
@@ -12,7 +11,7 @@ const Login = () => {
 			<h1>Login</h1>
 			<div>
 			{providers.map(provider => (
-          <A key={provider} href={`/.auth/login/${provider}?post_login_redirect_uri=${window.location.origin}${redirect()}`} target="_self">
+          <A key={provider} href={`/.auth/login/${provider}`} target="_self">
 						<button>{provider}</button>
 					</A>
 				))}
