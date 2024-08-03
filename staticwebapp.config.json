@@ -4,17 +4,17 @@
   },
 	"routes": [
     {
+      "route": "/logout",
+      "redirect": "/login"
+    },
+    {
+      "route": "/",
+      "allowedRoles": ["authenticated"]
+    },
+    {
       "route": "/*",
       "statusCode": 200
-    },
-		{
-			"route": "/",
-			"allowedRoles": ["authenticated"]
-		},
-		{
-			"route": "/logout",
-			"redirect": "/login"
-		}
+    }
   ],
 	"responseOverrides": {
 		"401": {
@@ -26,5 +26,4 @@
     "rewrite": "/index.html",
     "exclude": ["/images/*.{png,jpg,gif}", "/css/*"]
   }
-
 }
