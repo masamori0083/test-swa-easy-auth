@@ -5,7 +5,7 @@
 	"routes": [
     {
       "route": "/logout",
-      "redirect": "/login"
+      "redirect": "/.auth/logout"
     },
     {
       "route": "/",
